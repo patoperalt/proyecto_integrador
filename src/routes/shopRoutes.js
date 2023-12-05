@@ -3,7 +3,7 @@ const router = express.Router();
 
 const {
     shopView,
-     detailView,
+    detailView,
     addItemToCart,
     cartView,
     checkout,
