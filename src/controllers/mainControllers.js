@@ -1,17 +1,6 @@
-// const LicenseService = require('../service/licenceService');
-
 module.exports = {
-    homeView: async (req, res) => {
-        const licences = await LicenceService.getAllItemsLicences();
-        res.render('home', {
-            view: {
-                title: "Home | Funkoshop"
-            },
-            collections: licences.data,
-            enableGlide: true
-        });
-    },
-    contactView: (req, res) => res.send('Contact View Route'),
-    aboutView: (req, res) => res.send('About View Route'),
-    faqsView: (req, res) => res.send('FAQs View Route'),
-};
+    home: (req, res) => res.send('Esta es la vista de HOME'),
+    contact: (req, res) => res.send('Esta es la vista de Contacto'),
+    about: (req, res) => res.send('Esta es la vista de About'),
+    faqs: (req, res) => res.send('Esta es la vista de FAQS'),
+}
