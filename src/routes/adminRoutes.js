@@ -9,6 +9,4 @@ router.put('/edit/:id', (req, res) => res.send('Esta es la vista para IMPACTAR l
 router.delete('/delete/:id', (req, res) => res.send('Esta es la vista para ELIMINAR un ITEM ESPECIFICO'));
 
 
-
-
 module.exports = router;
