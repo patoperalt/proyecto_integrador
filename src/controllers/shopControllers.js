@@ -12,6 +12,9 @@ module.exports = {
     });
     },
     addItem: (req, res) => res.send('Esta es la vista para AGREGAR un nuevo ITEM'),
-    cart: (req, res) => res.send('Esta es la vista del CARRITO'),
+    
+    cart: (req, res) => {
+        res.send('Esta es la vista del CARRITO');
+    },
     addToCart: (req, res) => res.send('Esta es la vista para AGREGAR un nuevo ITEM al CARRITO'),
 }

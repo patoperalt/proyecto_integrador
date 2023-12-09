@@ -8,7 +8,9 @@ module.exports = {
     },
     doLogin: (req, res) => res.send('Esta es la vista de doLogin'),
     register: (req, res) => {
-        res.render(path.resolve(__dirname, '../views/auth/register.ejs'));
+        res.render(path.resolve(__dirname, '../views/auth/register.ejs'), {
+            title: "Registo"
+        });
     },
     doRegister: (req, res) => res.send('Esta es la vista de doRegister'),
     logout: (req, res) => res.send('Esta es la vista de Logout'),
