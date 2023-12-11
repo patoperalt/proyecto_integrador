@@ -1,11 +1,66 @@
 <%- include('../partials/header')%>
 
 
-<main>
-  <h1>pendiente pato</h1> 
+<main class="container create">
+  <h1 class="create__title">CREAR NUEVO ITEM</h1>
+  <form action="#">
+    <div class="create__category-licence">
+      <label class="create__label" for="categoria">Categoria: </label>
+      <select class="create__select" name="categoria" id="categoria" required>
+        <option value="#" disabled selected>Seleccionar</option>
+        <option value="figuras">Figuras</option>
+        <option value="valor1">valor1</option>
+        <option value="valor2">valor2</option>
+        <option value="valor3">calor3</option>
+      </select>
+      <label class="create__label" for="licencia">Licencia: </label>
+      <select class="create__select" name="licencia" id="licencia" required>
+        <option value="#" disabled selected>Seleccionar</option>
+        <option value="valor1">valor1</option>
+        <option value="valor2">valor2</option>
+        <option value="valor3">calor3</option>
+      </select>
+      <br>
+    </div>
+    <div>
+      <label class="create__product-info" for="producto">Nombre del producto:</label>
+      <input class="create__product-text" id="producto" type="text" placeholder="Kakashi Hatake Shipudden saga">
+    </div>
+    <textarea class="create__textarea" cols="120" rows="8" name="" id="create-description"
+      placeholder="Descripción del producto"></textarea>
+    <br>
+    <div>
+      <label class="create__product-info" for="sku">SKU:</label>
+      <input class="create__product-text create1" id="sku" type="text" placeholder="SSK111AB001">
+      <label class="create__product-info" for="precio">Precio:</label>
+      <input class="create__product-text create1" id="precio" type="text" placeholder="$ 0000,00">
+      <label class="create__product-info" for="stock">Stock:</label>
+      <input class="create__product-text create2" id="stock" type="text" placeholder="0">
+      <br>
+      <label class="create__product-info" for="descuento">Descuento:</label>
+      <input class="create__product-text create2" id="descuento" type="text" placeholder="0%">
+      <label class="create__product-info" for="cuotas">Cuotas:</label>
+      <select class="create__select" name="cuotas" id="cuotas" required>
+        <option value="6cuotas" selected>6 cuotas sin interés</option>
+        <option value="3cuotas">3 cuotas sin interés</option>
+        <option value="1cuota">1 cuota</option>
+
+      </select>
+    </div>
+    <br>
+    <div>
+      <label class="create__product-info" for="carga-imagenes">Imágenes:</label>
+      <input type="file" name="carga-imagenes" id="carga-imagenes" placeholder="No se ha seleccionado ningún archivo">
+    </div>
+    <br>
+    <div class="create__buttons">
+      <button class="create__button btn-modify" type="submit">Agregar producto</button>
+      <button class="create__button btn-clear" type="reset">Limpiar</button>
+    </div>
+  </form>
+  </section>
 </main>
 
-  <br><br><br>
 
 <%- include('../partials/footer')%>
 

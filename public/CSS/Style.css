@@ -26,10 +26,10 @@
 /* PAGES */
 
 @import url('./pages/home.css');
-@import url('./pages/StyleShop.css');
+@import url('./pages/shop.css');
 @import url('./pages/item.css');
 @import url('./pages/admin.css');
-@import url('./pages/StyleLogin.css');
-@import url('./pages/StyleRegistro.css');
+@import url('./pages/login.css');
+@import url('./pages/register.css');
 @import url('./pages/create.css');
 @import url('./pages/edit.css');

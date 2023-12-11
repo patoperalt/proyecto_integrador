@@ -1,0 +1,107 @@
+.create {
+    margin: var(--spacing-24) auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: var(--spacing-12);
+}
+
+.create__title {
+    font-size: var(--font-jumbo);
+    font-weight: 700;
+    margin: var(--spacing-24) 0;
+}
+
+.create__form {
+    max-width: 990px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: var(--spacing-48);
+}
+
+ 
+.create__textarea {
+    font-family: var(--base-font);
+    width: 1000px;
+    height: 195px;
+    font-weight: 400;
+    font-size: var(--font-large);
+    padding: var(--spacing-12)var(--spacing-8);
+  }
+  
+  .create__category-licence {
+    display: flex;
+    gap: var(--spacing-16);
+    align-items: center;
+    margin: var(--spacing-16) 0;
+  }
+  
+  
+  .create__label {
+    font-weight: 300;
+    font-size: var(--font-medium);
+    line-height: 29px;
+    text-align: left;
+  }
+  
+  .create__select {
+    width: 240px;
+    height: 45px;
+    font-weight: 500;
+    font-size: var(--font-medium);
+    line-height: var(--spacing-24);
+  }
+  
+  .create__product-info {
+    font-weight: 400;
+    font-size: var(--font-medium);
+    line-height: 29px;
+    text-align: right;
+  }
+  
+  .create__product-text {
+    border: none;
+    border-bottom: 2px solid var(--primary-solid);
+    width: 295px;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: var(--font-medium);
+    line-height: 22px;
+    margin: var(--spacing-24);
+  }
+  
+  .create1 {
+    border: none;
+    border-bottom: 2px solid var(--primary-solid);
+    max-width: 130px;
+  }
+  
+  .create2 {
+    border: none;
+    border-bottom: 2px solid var(--primary-solid);
+    max-width: 55px;
+  }
+  
+  .create__buttons {
+    width: 385px;
+    display: flex;
+    justify-content: space-between;
+    margin: var(--spacing-24) 0;
+    gap: var(--spacing-16);
+  }
+  
+  .create__button {
+    width: 175px;
+    height: 45px;
+    background-color: var(--primary-solid);
+    color: var(--light-font-solid);
+    padding: var(--spacing-12) var(--spacing-16);
+    border: none;
+    font-size: var(--font-small);
+    font-weight: 600;
+    line-height: var(--spacing-16);
+  }
+
