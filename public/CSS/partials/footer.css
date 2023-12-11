@@ -5,7 +5,7 @@
     padding: var(--spacing-68);
 }
 
-.footer_copy {
+.footer__copy {
    margin-top:var(--spacing-36);
    text-align: center;
 }
