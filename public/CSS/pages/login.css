@@ -1,4 +1,4 @@
-#login {
+.login {
     margin: var(--spacing-68) auto;
     display: flex;
     flex-direction: column;
@@ -10,6 +10,8 @@
 .login__title {
     text-align: center;
     font-size: var(--font-jumbo);
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 #login__form {
@@ -22,6 +24,11 @@
 }
 
 #login .form__link {
-    font-size: var(--font-small);
+    font-size: var(--font-xsmall);
+    text-align: center;
+}
+
+.form__link {
+    font-size: var(--font-xsmall);
     text-align: center;
 }

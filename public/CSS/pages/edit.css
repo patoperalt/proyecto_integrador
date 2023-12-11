@@ -1,0 +1,33 @@
+.edit__images {
+    display: flex;
+    gap: var(--spacing-36);
+  }
+  
+.edit__image {
+    width: 150px;
+    height: 150px;
+  }
+  
+.edit__image-title {
+    border: none;
+    border-top: 1px solid var(--primary-solid);
+    text-align: center;
+    font-weight: 500;
+    font-size: var(--font-xsmall);
+    gap: var(--spacing-24);
+    margin: var(--spacing-16) ;
+  }
+  
+.edit__button {
+    width: 175px;
+    height: 45px;
+    background-color: var(--primary-solid);
+    color: var(--light-font-solid);
+    padding: var(--spacing-16);
+    border: none;
+    font-size: var(--font-xsmall);
+    font-weight: 600;
+    line-height: var(--spacing-16);
+    margin: var(--spacing-16) 0;
+    gap: var(--spacing-24);
+  }

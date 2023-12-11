@@ -24,5 +24,6 @@
 }
 
 .btn--large {
-    padding: var(--spacing-12) var(--spacing-28);
+    padding: var(--spacing-28) var(--spacing-28);
 }
+
