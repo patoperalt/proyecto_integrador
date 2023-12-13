@@ -1,6 +1,7 @@
-#admin {
+.admin {
     margin: var(--spacing-68) auto;
 }
+
 .admin__search {
     display: flex;
     align-items: center;
@@ -35,7 +36,8 @@
 }
 
 .admin__header h2 {
-    font-size: var(--font-jumbo) ;
+    font-size: var(--font-xlarge) ;
+    text-align: left;
 }
 
 .admin__header span {
@@ -57,16 +59,24 @@
     gap: var(--spacing-16);
 }
 
-.admin-table__header,
+
+
+.admin-table__header {
+    display: grid;
+    grid-template-columns: 40px 1fr 3fr 3fr 40px 40px;
+    gap: var(--spacing-16);
+    margin-bottom: var(--spacing-24) ;
+    font-size: var(--font-small);
+    background-color: white;
+    color: var(--dark-solid);
+    
+}
+
 .admin-table__row {
     display: grid;
     grid-template-columns: 40px 1fr 3fr 3fr 40px 40px;
-    align-items: center;
     gap: var(--spacing-16);
-    font-size: var(--font-medium);
-    font-weight: 500;
-}
-
-.admin-table__header {
-    margin-bottom: var(--spacing-24);
+    margin-bottom: var(--spacing-12) ;
+    font-size: var(--font-xsmall);
+    color: var(--dark-bg-solid);
 }
