@@ -1,7 +1,14 @@
+const path = require('path');
+const { getAll } = require('../models/licenceModel');
+
 module.exports = {
-    home: (req, res) => {
+    home: async (req, res) => {
+
+        const data = await getAll();
+
         res.render('index', {
-            title: "Home"
+            title: "Home",
+            data
         });
     },
     contact: (req, res) => res.send('Esta es la vista de Contacto'),
