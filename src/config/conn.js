@@ -12,11 +12,11 @@ const pool = mysql.createPool({
     queueLimit: 0,
 });
 
-pool.getConnection((e, conn) => {
-    if(e) {
-        console.error('Error al conectarse a la DB: ' + e);
+pool.getConnection((err, conn) => {
+    if(err) {
+        console.error('Hubo un error al conectarse a la DB: ' + err);
     } else {
-        console.log('Conexion a la DB exitosa');
+        console.log('Conexion a la Base de datos exitosa');
         conn.release();
     }
 });

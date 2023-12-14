@@ -1,6 +1,6 @@
 const path = require('path');
-
-const data = [
+const { getAll } = require('../models/productModel');
+const json = [
     {
     product_id: 1,
     licence_name: "Pokemon",
@@ -115,16 +115,20 @@ const data = [
 
 module.exports = {
 
-    shop: (req, res) => {
+    shop: async (req, res) => {
 
-        res.render(path.resolve(__dirname, '../views/shop/shop.ejs'), {
+        const data = await getAll();
+
+           res.render(path.resolve(__dirname, '../views/shop/shop.ejs'), {
             title: "Tienda", 
             data
-        });
+            });
+
     },
     item: (req, res) => {
         const itemId = req.params.id;
-        const item = data.find( item => item.product_id == itemId);
+        
+        const item = json.find( item => item.product_id == itemId);
 
         res.render(path.resolve(__dirname, '../views/shop/item.ejs'), {
         title: "Item", 
