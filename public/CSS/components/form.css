@@ -19,11 +19,13 @@ textarea::placeholder {
     display: flex;
     gap: var(--spacing-12);
     align-items: center;
+    
 }
 
 .form__flex {
     display: flex;
     gap: var(--spacing-36);
+    width: 1200px;
 }
 
 .form__flex .form__box{
