@@ -5,7 +5,7 @@ const {
     home, 
     contact, 
     about, 
-    faqs
+    faqs,
 } = require('../controllers/mainControllers');
 
 router.get('/', home);

@@ -1,5 +1,7 @@
 const path = require('path');
 const { getAll, getOne } = require('../models/productModel');
+const { getAllLicence } = require('../models/licenceModel');
+const { getAllProducts } = require('../models/productModel');
 
 
 module.exports = {

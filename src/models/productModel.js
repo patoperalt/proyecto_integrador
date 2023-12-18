@@ -43,8 +43,40 @@ const create = async (params) => {
     }
 }
 
+const deleteOne = async (params) => {
+    try {
+        const [product] = await conn.query('DELETE FROM product WHERE ?', params);    
+        
+        return product;
+    } catch (error) {
+        return {
+            error: true,
+            message: 'Hemos encontrado un error: ' + error
+        }
+    }   finally {
+        conn.releaseConnection();
+    }
+}
+
+const getAllProducts = async () => {
+ 
+    try {
+        const [rows] = await conn.query('SELECT * FROM product');
+        return rows;
+    }   catch (error) {
+        return {
+            error: true,
+            message: 'Hemos encontrado un error: ' + error
+        }
+    }   finally {
+        conn.releaseConnection();
+    }
+}
+
 module.exports = {
     getAll,
     getOne,
-    create
+    create,
+    deleteOne,
+    getAllProducts
 }

@@ -1,6 +1,5 @@
 const path = require('path');
-const { getAll, getOne, create } = require('../models/productModel');
-const { log } = require('console');
+const { getAll, getOne, create, deleteOne } = require('../models/productModel');
 
 module.exports = {
     admin: async (req, res) => {
@@ -24,21 +23,20 @@ module.exports = {
 
        const product_schema = {
             product_name: req.body.name,
-            product_description: req.body.product_description,
+            product_description: req.body.description,
             price: Number(req.body.price),
             stock: Number(req.body.stock),
             discount: Number(req.body.discount), 
             sku: req.body.sku,
             dues: Number(req.body.dues),
-            image_front: req.files[0].originalname,
-            image_back: req.files[1].originalname,
+            image_front: '/products/'+req.files[0].filename,
+            image_back: '/products/'+req.files[1].filename,
             licence_id: Number(req.body.licence),
             category_id: Number(req.body.category),
         } 
-        const result = await create(product_schema)
-        console.log(result);
+        await create([Object.values(product_schema)]);
 
-        res.send('Esta es la vista para AGREGAR un nuevo ITEM: ');
+        res.redirect('/admin');
     },
     
     editView: async (req, res) => {
@@ -52,6 +50,15 @@ module.exports = {
             product
         });
     },
+    
     editItem: (req, res) => res.send('Esta es la vista para IMPACTAR la MODIFICACION un ITEM ESPECIFICO'),
-    deleteItem: (req, res) => res.send('Esta es la vista para ELIMINAR un ITEM ESPECIFICO')
-}
+    
+    
+    deleteItem: async (req, res) => {
+        const { id } = req.params;
+
+        await deleteOne ({ product_id: id});
+
+        res.redirect('/admin');
+    }
+};
