@@ -3,54 +3,61 @@
 
 <main class="container create">
   <h1 class="create__title">CREAR NUEVO ITEM</h1>
-  <form action="#">
+  <form class="create__form" action="/admin/create" method="POST" enctype="multipart/form-data">
     <div class="create__category-licence">
-      <label class="create__label" for="categoria">Categoria: </label>
-      <select class="create__select" name="categoria" id="categoria" required>
-        <option value="#" disabled selected>Seleccionar</option>
-        <option value="figuras">Figuras</option>
-        <option value="valor1">valor1</option>
-        <option value="valor2">valor2</option>
-        <option value="valor3">calor3</option>
+      <label class="create__label" for="category">Categoria:</label>
+      <select class="create__select" name="category" id="category" required>
+        <option value="" disabled selected>Seleccionar</option>
+        <option value="1">Figuras coleccionables</option>
+        <option value="2">LLaveros</option>
+        <option value="3">Remeras</option>
       </select>
-      <label class="create__label" for="licencia">Licencia: </label>
-      <select class="create__select" name="licencia" id="licencia" required>
+      <label class="create__label" for="licence">Licencia:</label>
+      <select class="create__select" name="licence" id="licence" required>
         <option value="#" disabled selected>Seleccionar</option>
-        <option value="valor1">valor1</option>
-        <option value="valor2">valor2</option>
-        <option value="valor3">calor3</option>
+        <option value="1">Pokemon</option>
+        <option value="2">Star Wars</option>
+        <option value="3">Harry Potter</option>
       </select>
       <br>
     </div>
     <div>
-      <label class="create__product-info" for="producto">Nombre del producto:</label>
-      <input class="create__product-text" id="producto" type="text" placeholder="Kakashi Hatake Shipudden saga">
+      <label class="create__product-info" for="name">Nombre del producto:</label>
+      <input class="create__product-text" id="name" name="name" type="text"  required>
     </div>
-    <textarea class="create__textarea" cols="120" rows="8" name="" id="create-description"
+    <textarea cols="30" rows="10" name="description" id="description"
       placeholder="Descripción del producto"></textarea>
     <br>
     <div>
       <label class="create__product-info" for="sku">SKU:</label>
-      <input class="create__product-text create1" id="sku" type="text" placeholder="SSK111AB001">
-      <label class="create__product-info" for="precio">Precio:</label>
-      <input class="create__product-text create1" id="precio" type="text" placeholder="$ 0000,00">
+      <input class="create__product-text create1" id="sku" name="sku" type="text"  required>
+      
+      <label class="create__product-info" for="price">Precio:</label>
+      <input class="create__product-text create1" id="price" name="price" type="text" placeholder="$ 0000,00" required>
+     
       <label class="create__product-info" for="stock">Stock:</label>
-      <input class="create__product-text create2" id="stock" type="text" placeholder="0">
+      <input class="create__product-text create2" id="stock" name="stock" type="text" placeholder="0" required>
       <br>
-      <label class="create__product-info" for="descuento">Descuento:</label>
-      <input class="create__product-text create2" id="descuento" type="text" placeholder="0%">
-      <label class="create__product-info" for="cuotas">Cuotas:</label>
-      <select class="create__select" name="cuotas" id="cuotas" required>
-        <option value="6cuotas" selected>6 cuotas sin interés</option>
-        <option value="3cuotas">3 cuotas sin interés</option>
-        <option value="1cuota">1 cuota</option>
+      
+      <label class="create__product-info" for="discount">Descuento:</label>
+      <input class="create__product-text create2" id="discount" name="discount" type="text" placeholder="0%" required>
+      
+      <label class="create__product-info" for="dues">Cuotas:</label>
+      <select class="create__select" name="dues" id="dues" required>
+        <option value="" disabled selected>Seleccionar</option>
+        <option value="12">12 cuotas sin interés</option>
+        <option value="9">9 cuotas sin interés</option>
+        <option value="6">6 cuotas sin interés</option>
+        <option value="3">3 cuotas sin interés</option>
+        <option value="1">1 cuota</option>
+        
 
       </select>
     </div>
     <br>
     <div>
       <label class="create__product-info" for="carga-imagenes">Imágenes:</label>
-      <input type="file" name="carga-imagenes" id="carga-imagenes" placeholder="No se ha seleccionado ningún archivo">
+      <input type="file" name="carga-imagenes" id="carga-imagenes" placeholder="No se ha seleccionado ningún archivo" multiple>
     </div>
     <br>
     <div class="create__buttons">

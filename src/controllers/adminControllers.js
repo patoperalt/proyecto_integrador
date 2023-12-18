@@ -1,5 +1,6 @@
 const path = require('path');
-const { getAll, getOne } = require('../models/productModel');
+const { getAll, getOne, create } = require('../models/productModel');
+const { log } = require('console');
 
 module.exports = {
     admin: async (req, res) => {
@@ -17,7 +18,28 @@ module.exports = {
         } 
         );
     },
-    createItem: (req, res) => res.send('Esta es la vista para AGREGAR un nuevo ITEM'), 
+    createItem: async (req, res) => {
+        console.log(req.body);
+        console.log(req.files);
+
+       const product_schema = {
+            product_name: req.body.name,
+            product_description: req.body.product_description,
+            price: Number(req.body.price),
+            stock: Number(req.body.stock),
+            discount: Number(req.body.discount), 
+            sku: req.body.sku,
+            dues: Number(req.body.dues),
+            image_front: req.files[0].originalname,
+            image_back: req.files[1].originalname,
+            licence_id: Number(req.body.licence),
+            category_id: Number(req.body.category),
+        } 
+        const result = await create(product_schema)
+        console.log(result);
+
+        res.send('Esta es la vista para AGREGAR un nuevo ITEM: ');
+    },
     
     editView: async (req, res) => {
         

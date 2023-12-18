@@ -1,12 +1,12 @@
 <%- include('../partials/header')%>
 
-<main class="container">
+<main class="create container">
   <h1 class="create__title">EDITAR ITEM</h1>
   <form class="edit__form" action="/admin/edit" method="POST" enctype="application/x-www-form-urlencoded">
     <div class="form__flex edit">
       <div class="form__box--flex">
-      <label class="form__label" for="collection">Categoria: </label>
-      <select class="form__select" name="collection" id="collection" required>
+      <label class="form__label" for="category">Categoria: </label>
+      <select class="form__select" name="category" id="category" required>
       <% if ( product.category_id == 1) { %>
         <option value="1" selected>Figuras coleccionables</option>
         <option value="3">LLaveros</option>
@@ -26,8 +26,8 @@
       </div>
 
       <div class="form__box--flex">
-        <label class="form__label" for="collection">Licencia: </label>
-        <select class="form__select" name="collection" id="collection" required>
+        <label class="form__label" for="licence">Licencia: </label>
+        <select class="form__select" name="licence" id="licence" required>
           <% if ( product.licence_id == 1) { %>
           <option value="2">Star Wars</option>
           <option value="1" selected>Pokemon</option>
