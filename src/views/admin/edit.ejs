@@ -1,26 +1,27 @@
 <%- include('../partials/header')%>
 
-<main class="create container">
+<main class="container create">
   <h1 class="create__title">EDITAR ITEM</h1>
   <form class="edit__form" action="/admin/edit" method="POST" enctype="application/x-www-form-urlencoded">
     <div class="form__flex edit">
       <div class="form__box--flex">
       <label class="form__label" for="category">Categoria: </label>
       <select class="form__select" name="category" id="category" required>
-      <% if ( product.category_id == 1) { %>
+       <% if ( product.category_id == 1) { %>
         <option value="1" selected>Figuras coleccionables</option>
-        <option value="3">LLaveros</option>
         <option value="2">Remeras</option>
-      <% } %>
-      <% if ( product.category_id == 2) { %>
-        <option value="1">Figuras coleccionables</option>
         <option value="3">LLaveros</option>
+      <% } %>
+        <% if ( product.category_id == 2) { %>
+        <option value="1">Figuras coleccionables</option>
         <option value="2" selected>Remeras</option>
+        <option value="3">LLaveros</option>
       <% } %>
-      <% if ( product.category_id == 3) { %>
+     
+    <% if ( product.category_id == 3) { %>
         <option value="1">Figuras coleccionables</option>
-        <option value="3" selected>LLaveros</option>
         <option value="2">Remeras</option>
+        <option value="3" selected>LLaveros</option>
       <% } %>
       </select>
       </div>
@@ -29,13 +30,13 @@
         <label class="form__label" for="licence">Licencia: </label>
         <select class="form__select" name="licence" id="licence" required>
           <% if ( product.licence_id == 1) { %>
-          <option value="2">Star Wars</option>
-          <option value="1" selected>Pokemon</option>
-          <option value="3">Harry Potter</option>
+            <option value="1" selected>Pokemon</option>
+            <option value="2">Star Wars</option>
+            <option value="3">Harry Potter</option>
           <% } %>
           <% if ( product.licence_id == 2) { %>
-            <option value="2" selected>Star Wars</option>
             <option value="1">Pokemon</option>
+            <option value="2" selected>Star Wars</option>
             <option value="3">Harry Potter</option>
             <% } %>
           <% if ( product.licence_id == 3) { %>

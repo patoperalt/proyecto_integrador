@@ -15,9 +15,9 @@ module.exports = {
 
     },
     item: async (req, res) => {
-        const itemId = req.params.id;
+        const { id } = req.params;
         
-        const [item] = await getOne(itemId);
+        const [item] = await getOne({ product_id: id});
         console.log(item);
         res.render(path.resolve(__dirname, '../views/shop/item.ejs'), {
         title: "Item", 
